@@ -14,7 +14,6 @@
 		AAC414131EB2BC7C005F1815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAC414111EB2BC7C005F1815 /* LaunchScreen.storyboard */; };
 		AAC4141E1EB2BC7C005F1815 /* WDYZBTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC4141D1EB2BC7C005F1815 /* WDYZBTests.swift */; };
 		AAC414291EB2BC7D005F1815 /* WDYZBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAC414281EB2BC7D005F1815 /* WDYZBUITests.swift */; };
-		AAC414371EB30D99005F1815 /* Classes in Resources */ = {isa = PBXBuildFile; fileRef = AAC414361EB30D99005F1815 /* Classes */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,6 @@
 		AAC414241EB2BC7C005F1815 /* WDYZBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WDYZBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC414281EB2BC7D005F1815 /* WDYZBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDYZBUITests.swift; sourceTree = "<group>"; };
 		AAC4142A1EB2BC7D005F1815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAC414361EB30D99005F1815 /* Classes */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Classes; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +74,61 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA74DA561EB319F700D373C4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AA74DA571EB319F700D373C4 /* Follow */,
+				AA74DA581EB319F700D373C4 /* Home */,
+				AA74DA591EB319F700D373C4 /* Live */,
+				AA74DA5A1EB319F700D373C4 /* Main */,
+				AA74DA5B1EB319F700D373C4 /* Profile */,
+				AA74DA5C1EB319F700D373C4 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AA74DA571EB319F700D373C4 /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		AA74DA581EB319F700D373C4 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AA74DA591EB319F700D373C4 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		AA74DA5A1EB319F700D373C4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AA74DA5B1EB319F700D373C4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		AA74DA5C1EB319F700D373C4 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		AAC413F91EB2BC7C005F1815 = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +152,7 @@
 		AAC414041EB2BC7C005F1815 /* WDYZB */ = {
 			isa = PBXGroup;
 			children = (
-				AAC414361EB30D99005F1815 /* Classes */,
+				AA74DA561EB319F700D373C4 /* Classes */,
 				AAC414051EB2BC7C005F1815 /* AppDelegate.swift */,
 				AAC414091EB2BC7C005F1815 /* Main.storyboard */,
 				AAC4140F1EB2BC7C005F1815 /* Assets.xcassets */,
@@ -236,7 +289,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAC414131EB2BC7C005F1815 /* LaunchScreen.storyboard in Resources */,
-				AAC414371EB30D99005F1815 /* Classes in Resources */,
 				AAC414101EB2BC7C005F1815 /* Assets.xcassets in Resources */,
 				AAC4140B1EB2BC7C005F1815 /* Main.storyboard in Resources */,
 			);
@@ -511,6 +563,7 @@
 				AAC4142F1EB2BC7D005F1815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAC414301EB2BC7D005F1815 /* Build configuration list for PBXNativeTarget "WDYZBTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +572,7 @@
 				AAC414321EB2BC7D005F1815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AAC414331EB2BC7D005F1815 /* Build configuration list for PBXNativeTarget "WDYZBUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +581,7 @@
 				AAC414351EB2BC7D005F1815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
