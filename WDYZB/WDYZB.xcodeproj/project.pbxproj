@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA4681911EB8C63000484748 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681901EB8C63000484748 /* PageTitleView.swift */; };
+		AA4681941EB8D39D00484748 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681931EB8D39D00484748 /* UIBarButtonItem-Extension.swift */; };
 		AA74DA5F1EB327C300D373C4 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA74DA5D1EB327C300D373C4 /* Home.storyboard */; };
 		AA74DA611EB327FC00D373C4 /* Live.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA74DA601EB327FC00D373C4 /* Live.storyboard */; };
 		AA74DA661EB328B100D373C4 /* Follow.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA74DA651EB328B100D373C4 /* Follow.storyboard */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA4681901EB8C63000484748 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageTitleView.swift; path = WDYZB/Classes/Main/PageTitleView.swift; sourceTree = SOURCE_ROOT; };
+		AA4681931EB8D39D00484748 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem-Extension.swift"; path = "WDYZB/Classes/UIBarButtonItem-Extension.swift"; sourceTree = SOURCE_ROOT; };
 		AA74DA5E1EB327C300D373C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = WDYZB/Base.lproj/Home.storyboard; sourceTree = SOURCE_ROOT; };
 		AA74DA601EB327FC00D373C4 /* Live.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Live.storyboard; path = ../Main/Live.storyboard; sourceTree = "<group>"; };
 		AA74DA651EB328B100D373C4 /* Follow.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Follow.storyboard; path = ../Main/Follow.storyboard; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA4681921EB8CB8500484748 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AA4681931EB8D39D00484748 /* UIBarButtonItem-Extension.swift */,
+			);
+			name = Extension;
+			path = ../../../../../../Downloads/Extension;
+			sourceTree = "<group>";
+		};
 		AA74DA561EB319F700D373C4 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +159,7 @@
 		AA74DA5C1EB319F700D373C4 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				AA4681921EB8CB8500484748 /* Extension */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -192,6 +206,7 @@
 		AA74DA721EB3949900D373C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AA4681901EB8C63000484748 /* PageTitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -386,7 +401,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA74DA731EB3949900D373C4 /* MainViewController.swift in Sources */,
+				AA4681941EB8D39D00484748 /* UIBarButtonItem-Extension.swift in Sources */,
 				AAC414061EB2BC7C005F1815 /* AppDelegate.swift in Sources */,
+				AA4681911EB8C63000484748 /* PageTitleView.swift in Sources */,
 				AAC4140E1EB2BC7C005F1815 /* WDYZB.xcdatamodeld in Sources */,
 				AA74DA751EB3953800D373C4 /* HomeViewController.swift in Sources */,
 			);
