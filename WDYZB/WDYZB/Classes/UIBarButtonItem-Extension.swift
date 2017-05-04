@@ -6,13 +6,6 @@
 //  Copyright © 2017年 vincentwen. All rights reserved.
 //
 
-//
-//  UIBarButtonItem-Extension.swift
-//  DYZB
-//
-//  Created by 1 on 16/9/14.
-//  Copyright © 2016年 小码哥. All rights reserved.
-//
 
 import UIKit
 
