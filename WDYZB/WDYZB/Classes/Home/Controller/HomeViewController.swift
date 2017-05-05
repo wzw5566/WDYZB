@@ -20,6 +20,33 @@ class HomeViewController: UIViewController {
         return titleView
         }()
     
+    //懒加载，闭包定义pageContentView
+    fileprivate lazy var pageContentView : PageContentView = {[weak self] in
+        
+
+        //确定frame的高度
+        let contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH - kTabbarH
+        
+        //定义frame
+        let contentFrame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
+        
+        var chilVcs = [UIViewController]()
+        
+        //循环创建子控制器
+        for _ in 0..<4{
+            
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
+            chilVcs.append(vc)
+        }
+        
+        //调用自定义构造函数,父控制器传入自身
+        
+       let contentView = PageContentView(frame: contentFrame, chilVcs: chilVcs, parentViewController: self!)
+        
+        return contentView
+    }()
+    
     
     
        
@@ -45,6 +72,10 @@ extension HomeViewController {
         
         // 2.添加TitleView
         view.addSubview(pageTitleView)
+        
+        //3.添加ContenView
+        view.addSubview(pageContentView)
+        pageContentView.backgroundColor = UIColor.blue
         
 
 
