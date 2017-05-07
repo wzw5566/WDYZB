@@ -32,8 +32,10 @@ class HomeViewController: UIViewController {
         
         var chilVcs = [UIViewController]()
         
+        chilVcs.append(RecommendViewController())
+        
         //循环创建子控制器
-        for _ in 0..<4{
+        for _ in 0..<3{
             
             let vc = UIViewController()
             

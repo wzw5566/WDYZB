@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA39A1A71EBEEA4400CCE926 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39A1A61EBEEA4400CCE926 /* RecommendViewController.swift */; };
 		AA4681911EB8C63000484748 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681901EB8C63000484748 /* PageTitleView.swift */; };
 		AA4681941EB8D39D00484748 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681931EB8D39D00484748 /* UIBarButtonItem-Extension.swift */; };
 		AA4681961EB8DD7400484748 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681951EB8DD7400484748 /* Common.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA39A1A61EBEEA4400CCE926 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		AA4681901EB8C63000484748 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageTitleView.swift; path = WDYZB/Classes/Main/PageTitleView.swift; sourceTree = SOURCE_ROOT; };
 		AA4681931EB8D39D00484748 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem-Extension.swift"; path = "WDYZB/Classes/UIBarButtonItem-Extension.swift"; sourceTree = SOURCE_ROOT; };
 		AA4681951EB8DD7400484748 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = WDYZB/Classes/Common.swift; sourceTree = SOURCE_ROOT; };
@@ -177,6 +179,7 @@
 			children = (
 				AA74DA5D1EB327C300D373C4 /* Home.storyboard */,
 				AA74DA741EB3953800D373C4 /* HomeViewController.swift */,
+				AA39A1A61EBEEA4400CCE926 /* RecommendViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				AAC4140E1EB2BC7C005F1815 /* WDYZB.xcdatamodeld in Sources */,
 				AA74DA751EB3953800D373C4 /* HomeViewController.swift in Sources */,
 				AA4681961EB8DD7400484748 /* Common.swift in Sources */,
+				AA39A1A71EBEEA4400CCE926 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
