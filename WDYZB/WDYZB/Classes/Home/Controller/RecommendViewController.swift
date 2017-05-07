@@ -37,13 +37,21 @@ class RecommendViewController: UIViewController {
         layout.headerReferenceSize = CGSize(width: kScreenW, height: kHeaderViewH)
 
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: layout)
-        collectionView.backgroundColor = UIColor.blue
+        collectionView.backgroundColor = UIColor.white
+        //高宽跟随父控件
+        collectionView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
         collectionView.dataSource = self
 
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kNormalCellID)
         
-        //注册头部
-        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+
+        
+        collectionView.register(UINib(nibName: "CollectionHeaderView", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: kHeaderViewID)
+        
+        //注册cell
+        collectionView.register(UINib(nibName: "CollectionNormalCell", bundle: nil), forCellWithReuseIdentifier: kNormalCellID)
+
+        
         return collectionView
    
         
@@ -53,11 +61,8 @@ class RecommendViewController: UIViewController {
     //MARK: 系统回调函数
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.purple
         
 
-
-        
         setupUI()
 
     }
@@ -92,7 +97,7 @@ extension RecommendViewController :UICollectionViewDataSource{
         
     }func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
-        cell.backgroundColor = UIColor.red
+        //cell.backgroundColor = UIColor.red
         return cell
     }
     
@@ -102,8 +107,6 @@ extension RecommendViewController :UICollectionViewDataSource{
         
         //1.取出headerView
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
-        
-        headerView.backgroundColor = UIColor.green
         
         return headerView
         
