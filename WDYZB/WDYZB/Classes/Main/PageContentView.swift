@@ -8,13 +8,26 @@
 
 import UIKit
 
+//定义协议，通知代理内部数据变化
+protocol PageContentViewDelegate : class {
+    func pageContentView(_ contentView : PageContentView, progress : CGFloat, sourceIndex : Int, targetIndex : Int)
+}
+
+
 private let ContentCellID = "ContentCellID"
 
 class PageContentView: UIView {
     
+    // MARK：定义属性
+    //
+    fileprivate var startOffsetX : CGFloat = 0
+    //禁止代理
+    fileprivate var isForbidScrollDelegate : Bool = false
+    //定义代理
+    weak var delegate : PageContentViewDelegate?
+    
     //定义chilVcs属性，存储传入的界面控制器数组
     fileprivate var chilVcs: [UIViewController]
-    
     //防止循环引用，无法销毁对象，改成weak 弱引用
     fileprivate weak var  parentViewController: UIViewController?
     //MARK:定义collectionView,懒加载
@@ -38,6 +51,7 @@ class PageContentView: UIView {
         collectionView.bounces = false
         collectionView.scrollsToTop = false
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.isPagingEnabled = true
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ContentCellID)
         return collectionView
@@ -122,6 +136,67 @@ extension PageContentView : UICollectionViewDataSource{
         
     }
     
+}
+
+// MARK:- 遵守UICollectionViewDelegate
+extension PageContentView : UICollectionViewDelegate {
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
+        isForbidScrollDelegate = false
+        
+        startOffsetX = scrollView.contentOffset.x
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        // 0.判断是否是点击事件
+        if isForbidScrollDelegate { return }
+        
+        // 1.定义获取需要的数据
+        var progress : CGFloat = 0
+        var sourceIndex : Int = 0
+        var targetIndex : Int = 0
+        
+        // 2.判断是左滑还是右滑
+        let currentOffsetX = scrollView.contentOffset.x
+        let scrollViewW = scrollView.bounds.width
+        if currentOffsetX > startOffsetX { // 左滑
+            // 1.计算progress
+            progress = currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW)
+            
+            // 2.计算sourceIndex
+            sourceIndex = Int(currentOffsetX / scrollViewW)
+            
+            // 3.计算targetIndex
+            targetIndex = sourceIndex + 1
+            if targetIndex >= chilVcs.count {
+                targetIndex = chilVcs.count - 1
+            }
+            
+            // 4.如果完全划过去
+            if currentOffsetX - startOffsetX == scrollViewW {
+                progress = 1
+                targetIndex = sourceIndex
+            }
+        } else { // 右滑
+            // 1.计算progress
+            progress = 1 - (currentOffsetX / scrollViewW - floor(currentOffsetX / scrollViewW))
+            
+            // 2.计算targetIndex
+            targetIndex = Int(currentOffsetX / scrollViewW)
+            
+            // 3.计算sourceIndex
+            sourceIndex = targetIndex + 1
+            if sourceIndex >= chilVcs.count {
+                sourceIndex = chilVcs.count - 1
+            }
+        }
+        
+        // 3.将progress/sourceIndex/targetIndex传递给titleView
+        delegate?.pageContentView(self, progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+        
+    }
 }
 
 
