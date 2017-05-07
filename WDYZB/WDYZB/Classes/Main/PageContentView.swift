@@ -14,14 +14,15 @@ class PageContentView: UIView {
     
     //定义chilVcs属性，存储传入的界面控制器数组
     fileprivate var chilVcs: [UIViewController]
-    fileprivate var parentViewController: UIViewController
     
+    //防止循环引用，无法销毁对象，改成weak 弱引用
+    fileprivate weak var  parentViewController: UIViewController?
     //MARK:定义collectionView,懒加载
     fileprivate lazy var collectionView: UICollectionView = {[weak self] in
     
         //创建布局layout
         let layout = UICollectionViewFlowLayout()
-        //父容器有多大，内容区域就有多大
+        //父容器有多大，内容区域就有多大 可以类型的强制解包
         layout.itemSize = (self?.bounds.size)!
         //设置行间距
         layout.minimumLineSpacing = 0
@@ -77,7 +78,7 @@ extension PageContentView{
         //1.将所有传入的子控制器添加到父控制器中
 
         for chilVc in chilVcs {
-            parentViewController.addChildViewController(chilVc)
+            parentViewController?.addChildViewController(chilVc)
         }
         
         //2.真正布局contenView的内容,添加UICollectionView
@@ -91,12 +92,15 @@ extension PageContentView{
 
 // MARK:- 遵守UICollectionViewDataSource
 extension PageContentView : UICollectionViewDataSource{
-
+    
+    // MARK： 必须实现的数据源协议方法numberOfItemsInSection
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
         return chilVcs.count
     }
     
+    
+    // MARK： 必须实现的数据源协议方法cellForItemAt，详细的数据绑定
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         // MARK: 创建Cell
@@ -118,4 +122,21 @@ extension PageContentView : UICollectionViewDataSource{
         
     }
     
+}
+
+
+// MARK:- 对外暴露的方法
+extension PageContentView {
+    func setCurrentIndex(_ currentIndex : Int) {
+        
+        //1.计划需要执行的代理方法
+        isUserInteractionEnabled = true
+        
+        //2.计算偏移量，滚动到正确的位置,传入偏移量的x y 坐标
+        let offsetX = CGFloat(currentIndex) * collectionView.frame.width
+        collectionView.setContentOffset(CGPoint(x:offsetX,y:0), animated: false)
+        
+        
+
+    }
 }

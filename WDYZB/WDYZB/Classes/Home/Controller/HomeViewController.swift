@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
         return titleView
         }()
     
-    //懒加载，闭包定义pageContentView
+    //懒加载，闭包定义pageContentView，防止循环引用，使用[weak self] in 标记为弱引用
     fileprivate lazy var pageContentView : PageContentView = {[weak self] in
         
 
@@ -36,6 +36,8 @@ class HomeViewController: UIViewController {
         for _ in 0..<4{
             
             let vc = UIViewController()
+            
+            //调用随机函数，设置背景颜色
             vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)))
             chilVcs.append(vc)
         }
@@ -94,11 +96,12 @@ extension HomeViewController {
     }
 }
 
-
-// MARK:- 遵守PageTitleViewDelegate协议
-extension HomeViewController : PageTitleViewDelegate {
+// MARK ： 遵守PageTitleView的代理协议
+extension HomeViewController:PageTitleViewDelegate{
+    
+    //实现协议的方法，将pagetitleview中的选中的lable的下标，传给pageContentView的下标
     func pageTitleView(_ titleView: PageTitleView, selectedIndex index: Int) {
-        
+          pageContentView.setCurrentIndex(index)
     }
 }
 

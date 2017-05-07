@@ -8,7 +8,7 @@
 
 import UIKit
 
-// MARK:- 定义协议
+// MARK:- 定义代理，让内部的选择的lable Index变化告诉给外部
 protocol PageTitleViewDelegate : class {
     func pageTitleView(_ titleView : PageTitleView, selectedIndex index : Int)
 }
@@ -65,6 +65,7 @@ extension PageTitleView {
     fileprivate func setupUI() {
         // 1.添加UIScrollView
         addSubview(scrollView)
+        
         scrollView.frame = bounds
         
         // 2.添加title对应的Label
@@ -100,6 +101,15 @@ extension PageTitleView {
             // 4.将label添加到scrollView中
             scrollView.addSubview(label)
             titleLabels.append(label)
+            
+            //5.监听lable的点击事件，通过设置手势来实现
+            //将可以交互的属性设置为True，默认lable是不可用交互
+            label.isUserInteractionEnabled = true
+            //定义点击交互事件
+            let TapGes = UITapGestureRecognizer(target: self, action: #selector(self.titleLableClick(_:))  )
+            label.addGestureRecognizer(TapGes)
+            
+            
 
         }
     }
@@ -123,4 +133,48 @@ extension PageTitleView {
         scrollLine.frame = CGRect(x: firstLabel.frame.origin.x, y: frame.height - kScrollLineH, width: firstLabel.frame.width, height: kScrollLineH)
     }
 }
+
+// MARK: lable的颜色切换和lable的下划线的滚动
+extension PageTitleView{
+    
+    @objc fileprivate func titleLableClick(_ tapGes : UITapGestureRecognizer){
+        
+        //1.获取当前的下标值,如果没有值就直接返回
+        guard let currentLable = tapGes.view as? UILabel else { return }
+        
+        //2.获取之前的lable下标值
+        let oldLable = titleLabels[currentIndex]
+        
+        //3.切换lable的颜色
+        currentLable.textColor = UIColor.orange
+        oldLable.textColor = UIColor.darkGray
+        
+        //4.保存最新的lable下标
+        currentIndex = currentLable.tag
+        
+        //5.滚动条的位置发生变化,计算x轴的移动宽度
+        let scrollLineX = CGFloat(currentIndex) * scrollLine.frame.width
+        //设置移动动画
+        UIView.animate(withDuration: 0.15, animations:{
+            self.scrollLine.frame.origin.x = scrollLineX
+        })
+        
+        //6.通知代理
+        delegate?.pageTitleView(self, selectedIndex: currentIndex)
+        
+    }
+}
+
+// MARK： 将内部lable的index变化暴露给外部的函数
+
+extension PageTitleView{
+    func setTitleWithProgress(_ progress : CGFloat, sourceIndex : Int, targetIndex : Int)  {
+         
+    
+    }
+}
+
+
+
+
 
