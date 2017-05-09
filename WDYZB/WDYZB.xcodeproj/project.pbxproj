@@ -12,6 +12,8 @@
 		AA39A1AB1EBF5ED000CCE926 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA39A1A91EBF5ECF00CCE926 /* CollectionHeaderView.xib */; };
 		AA39A1AE1EBF797B00CCE926 /* CollectionNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39A1AC1EBF797B00CCE926 /* CollectionNormalCell.swift */; };
 		AA39A1AF1EBF797B00CCE926 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA39A1AD1EBF797B00CCE926 /* CollectionNormalCell.xib */; };
+		AA3B72871EC213F20028792C /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B72851EC213F20028792C /* CollectionPrettyCell.swift */; };
+		AA3B72881EC213F20028792C /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3B72861EC213F20028792C /* CollectionPrettyCell.xib */; };
 		AA4681911EB8C63000484748 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681901EB8C63000484748 /* PageTitleView.swift */; };
 		AA4681941EB8D39D00484748 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681931EB8D39D00484748 /* UIBarButtonItem-Extension.swift */; };
 		AA4681961EB8DD7400484748 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681951EB8DD7400484748 /* Common.swift */; };
@@ -55,6 +57,8 @@
 		AA39A1A91EBF5ECF00CCE926 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionHeaderView.xib; path = WDYZB/Classes/Home/Controller/CollectionHeaderView.xib; sourceTree = SOURCE_ROOT; };
 		AA39A1AC1EBF797B00CCE926 /* CollectionNormalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionNormalCell.swift; path = WDYZB/Classes/Main/CollectionNormalCell.swift; sourceTree = SOURCE_ROOT; };
 		AA39A1AD1EBF797B00CCE926 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionNormalCell.xib; path = WDYZB/Classes/Main/CollectionNormalCell.xib; sourceTree = SOURCE_ROOT; };
+		AA3B72851EC213F20028792C /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionPrettyCell.swift; path = WDYZB/Classes/Main/CollectionPrettyCell.swift; sourceTree = SOURCE_ROOT; };
+		AA3B72861EC213F20028792C /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionPrettyCell.xib; path = WDYZB/Classes/Main/CollectionPrettyCell.xib; sourceTree = SOURCE_ROOT; };
 		AA4681901EB8C63000484748 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageTitleView.swift; path = WDYZB/Classes/Main/PageTitleView.swift; sourceTree = SOURCE_ROOT; };
 		AA4681931EB8D39D00484748 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem-Extension.swift"; path = "WDYZB/Classes/UIBarButtonItem-Extension.swift"; sourceTree = SOURCE_ROOT; };
 		AA4681951EB8DD7400484748 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = WDYZB/Classes/Common.swift; sourceTree = SOURCE_ROOT; };
@@ -231,6 +235,8 @@
 				AA46819B1EBBE9CE00484748 /* PageContentView.swift */,
 				AA39A1AC1EBF797B00CCE926 /* CollectionNormalCell.swift */,
 				AA39A1AD1EBF797B00CCE926 /* CollectionNormalCell.xib */,
+				AA3B72851EC213F20028792C /* CollectionPrettyCell.swift */,
+				AA3B72861EC213F20028792C /* CollectionPrettyCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,6 +406,7 @@
 				AAC4140B1EB2BC7C005F1815 /* Main.storyboard in Resources */,
 				AA74DA611EB327FC00D373C4 /* Live.storyboard in Resources */,
 				AA74DA661EB328B100D373C4 /* Follow.storyboard in Resources */,
+				AA3B72881EC213F20028792C /* CollectionPrettyCell.xib in Resources */,
 				AA74DA691EB328E100D373C4 /* Profile.storyboard in Resources */,
 				AA74DA5F1EB327C300D373C4 /* Home.storyboard in Resources */,
 			);
@@ -436,6 +443,7 @@
 				AAC4140E1EB2BC7C005F1815 /* WDYZB.xcdatamodeld in Sources */,
 				AA74DA751EB3953800D373C4 /* HomeViewController.swift in Sources */,
 				AA4681961EB8DD7400484748 /* Common.swift in Sources */,
+				AA3B72871EC213F20028792C /* CollectionPrettyCell.swift in Sources */,
 				AA39A1AE1EBF797B00CCE926 /* CollectionNormalCell.swift in Sources */,
 				AA39A1A71EBEEA4400CCE926 /* RecommendViewController.swift in Sources */,
 			);
