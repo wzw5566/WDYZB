@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BCF989D21697016E00AE76E /* Pods_WDYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3372CECA0D055CA1FA2BDBA6 /* Pods_WDYZB.framework */; };
 		AA39A1A71EBEEA4400CCE926 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39A1A61EBEEA4400CCE926 /* RecommendViewController.swift */; };
 		AA39A1AA1EBF5ECF00CCE926 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39A1A81EBF5ECF00CCE926 /* CollectionHeaderView.swift */; };
 		AA39A1AB1EBF5ED000CCE926 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA39A1A91EBF5ECF00CCE926 /* CollectionHeaderView.xib */; };
@@ -14,6 +15,7 @@
 		AA39A1AF1EBF797B00CCE926 /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA39A1AD1EBF797B00CCE926 /* CollectionNormalCell.xib */; };
 		AA3B72871EC213F20028792C /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B72851EC213F20028792C /* CollectionPrettyCell.swift */; };
 		AA3B72881EC213F20028792C /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA3B72861EC213F20028792C /* CollectionPrettyCell.xib */; };
+		AA3B728C1EC3C9330028792C /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3B728B1EC3C9330028792C /* NetworkTools.swift */; };
 		AA4681911EB8C63000484748 /* PageTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681901EB8C63000484748 /* PageTitleView.swift */; };
 		AA4681941EB8D39D00484748 /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681931EB8D39D00484748 /* UIBarButtonItem-Extension.swift */; };
 		AA4681961EB8DD7400484748 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4681951EB8DD7400484748 /* Common.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3372CECA0D055CA1FA2BDBA6 /* Pods_WDYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F2E5A3C91FFC52407A4B2A3 /* Pods-WDYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDYZB/Pods-WDYZB.debug.xcconfig"; sourceTree = "<group>"; };
 		AA39A1A61EBEEA4400CCE926 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		AA39A1A81EBF5ECF00CCE926 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionHeaderView.swift; path = WDYZB/Classes/Home/Controller/CollectionHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		AA39A1A91EBF5ECF00CCE926 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionHeaderView.xib; path = WDYZB/Classes/Home/Controller/CollectionHeaderView.xib; sourceTree = SOURCE_ROOT; };
@@ -59,6 +63,7 @@
 		AA39A1AD1EBF797B00CCE926 /* CollectionNormalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionNormalCell.xib; path = WDYZB/Classes/Main/CollectionNormalCell.xib; sourceTree = SOURCE_ROOT; };
 		AA3B72851EC213F20028792C /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionPrettyCell.swift; path = WDYZB/Classes/Main/CollectionPrettyCell.swift; sourceTree = SOURCE_ROOT; };
 		AA3B72861EC213F20028792C /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionPrettyCell.xib; path = WDYZB/Classes/Main/CollectionPrettyCell.xib; sourceTree = SOURCE_ROOT; };
+		AA3B728B1EC3C9330028792C /* NetworkTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkTools.swift; path = WDYZB/Classes/Home/NetworkTools.swift; sourceTree = SOURCE_ROOT; };
 		AA4681901EB8C63000484748 /* PageTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PageTitleView.swift; path = WDYZB/Classes/Main/PageTitleView.swift; sourceTree = SOURCE_ROOT; };
 		AA4681931EB8D39D00484748 /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem-Extension.swift"; path = "WDYZB/Classes/UIBarButtonItem-Extension.swift"; sourceTree = SOURCE_ROOT; };
 		AA4681951EB8DD7400484748 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = WDYZB/Classes/Common.swift; sourceTree = SOURCE_ROOT; };
@@ -83,6 +88,7 @@
 		AAC414241EB2BC7C005F1815 /* WDYZBUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WDYZBUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAC414281EB2BC7D005F1815 /* WDYZBUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WDYZBUITests.swift; sourceTree = "<group>"; };
 		AAC4142A1EB2BC7D005F1815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA2E6B039D60016E95050A7 /* Pods-WDYZB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDYZB.release.xcconfig"; path = "Pods/Target Support Files/Pods-WDYZB/Pods-WDYZB.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BCF989D21697016E00AE76E /* Pods_WDYZB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +117,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99104FB089C078E542419FAC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3372CECA0D055CA1FA2BDBA6 /* Pods_WDYZB.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A28171291BBA1C88A3A78B29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F2E5A3C91FFC52407A4B2A3 /* Pods-WDYZB.debug.xcconfig */,
+				BFA2E6B039D60016E95050A7 /* Pods-WDYZB.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AA4681921EB8CB8500484748 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +206,7 @@
 			children = (
 				AA4681921EB8CB8500484748 /* Extension */,
 				AA4681951EB8DD7400484748 /* Common.swift */,
+				AA3B728B1EC3C9330028792C /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -248,6 +273,8 @@
 				AAC4141C1EB2BC7C005F1815 /* WDYZBTests */,
 				AAC414271EB2BC7C005F1815 /* WDYZBUITests */,
 				AAC414031EB2BC7C005F1815 /* Products */,
+				A28171291BBA1C88A3A78B29 /* Pods */,
+				99104FB089C078E542419FAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -299,9 +326,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAC4142D1EB2BC7D005F1815 /* Build configuration list for PBXNativeTarget "WDYZB" */;
 			buildPhases = (
+				6A2338971DD0939DDC9DFA5F /* [CP] Check Pods Manifest.lock */,
 				AAC413FE1EB2BC7C005F1815 /* Sources */,
 				AAC413FF1EB2BC7C005F1815 /* Frameworks */,
 				AAC414001EB2BC7C005F1815 /* Resources */,
+				C0D6FEFE6078A54BD45AE61F /* [CP] Embed Pods Frameworks */,
+				7B76A0DE7928261956C25721 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -428,11 +458,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A2338971DD0939DDC9DFA5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7B76A0DE7928261956C25721 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WDYZB/Pods-WDYZB-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0D6FEFE6078A54BD45AE61F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WDYZB/Pods-WDYZB-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AAC413FE1EB2BC7C005F1815 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA3B728C1EC3C9330028792C /* NetworkTools.swift in Sources */,
 				AA74DA731EB3949900D373C4 /* MainViewController.swift in Sources */,
 				AA39A1AA1EBF5ECF00CCE926 /* CollectionHeaderView.swift in Sources */,
 				AA46819C1EBBE9CE00484748 /* PageContentView.swift in Sources */,
@@ -612,6 +691,7 @@
 		};
 		AAC4142E1EB2BC7D005F1815 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F2E5A3C91FFC52407A4B2A3 /* Pods-WDYZB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -626,6 +706,7 @@
 		};
 		AAC4142F1EB2BC7D005F1815 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFA2E6B039D60016E95050A7 /* Pods-WDYZB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
