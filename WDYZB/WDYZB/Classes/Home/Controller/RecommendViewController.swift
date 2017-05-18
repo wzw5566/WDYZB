@@ -23,9 +23,11 @@ let kPrettyItemH = kItemW * 4 / 3
 
 class RecommendViewController: UIViewController {
 
+    //MARK: 懒加载Recommend的ViewModel
+   fileprivate lazy var recommendVM: RecommendViewModel = RecommendViewModel()
     
-    //定义属性
-     lazy var collectionView : UICollectionView = {[ unowned self] in
+    //MARK:定义属性
+    fileprivate lazy var collectionView : UICollectionView = {[ unowned self] in
         
         
         let layout = UICollectionViewFlowLayout()
@@ -81,6 +83,18 @@ extension RecommendViewController{
         
     }
     
+}
+
+//MARK: - 请求数据
+extension RecommendViewController{
+    
+   private  func loadData() {
+        
+    NetworkTools.requestData(.post, URLString: "http://httpbin.org/post", parameters: ["name" : "vincent"]) { (result) in
+            print(result)
+        }
+  
+    }
 }
 
 

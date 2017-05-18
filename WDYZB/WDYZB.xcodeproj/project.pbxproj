@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0BCF989D21697016E00AE76E /* Pods_WDYZB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3372CECA0D055CA1FA2BDBA6 /* Pods_WDYZB.framework */; };
+		AA1078B71ECE643D00F806E9 /* RecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1078B61ECE643D00F806E9 /* RecommendViewModel.swift */; };
+		AA1078B91ECE67C900F806E9 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1078B81ECE67C900F806E9 /* NSDate-Extension.swift */; };
 		AA39A1A71EBEEA4400CCE926 /* RecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39A1A61EBEEA4400CCE926 /* RecommendViewController.swift */; };
 		AA39A1AA1EBF5ECF00CCE926 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA39A1A81EBF5ECF00CCE926 /* CollectionHeaderView.swift */; };
 		AA39A1AB1EBF5ED000CCE926 /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA39A1A91EBF5ECF00CCE926 /* CollectionHeaderView.xib */; };
@@ -56,6 +58,8 @@
 /* Begin PBXFileReference section */
 		3372CECA0D055CA1FA2BDBA6 /* Pods_WDYZB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WDYZB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F2E5A3C91FFC52407A4B2A3 /* Pods-WDYZB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WDYZB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WDYZB/Pods-WDYZB.debug.xcconfig"; sourceTree = "<group>"; };
+		AA1078B61ECE643D00F806E9 /* RecommendViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewModel.swift; sourceTree = "<group>"; };
+		AA1078B81ECE67C900F806E9 /* NSDate-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate-Extension.swift"; path = "WDYZB/Classes/Home/NSDate-Extension.swift"; sourceTree = SOURCE_ROOT; };
 		AA39A1A61EBEEA4400CCE926 /* RecommendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendViewController.swift; sourceTree = "<group>"; };
 		AA39A1A81EBF5ECF00CCE926 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionHeaderView.swift; path = WDYZB/Classes/Home/Controller/CollectionHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		AA39A1A91EBF5ECF00CCE926 /* CollectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CollectionHeaderView.xib; path = WDYZB/Classes/Home/Controller/CollectionHeaderView.xib; sourceTree = SOURCE_ROOT; };
@@ -134,11 +138,27 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AA1078B21ECE5E8500F806E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AA1078B31ECE5EDC00F806E9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA1078B61ECE643D00F806E9 /* RecommendViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		AA4681921EB8CB8500484748 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				AA4681931EB8D39D00484748 /* UIBarButtonItem-Extension.swift */,
 				AA4681991EBBE11300484748 /* UIColor-Extension.swift */,
+				AA1078B81ECE67C900F806E9 /* NSDate-Extension.swift */,
 			);
 			name = Extension;
 			path = ../../../../../../Downloads/Extension;
@@ -168,6 +188,7 @@
 		AA74DA581EB319F700D373C4 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				AA1078B31ECE5EDC00F806E9 /* ViewModel */,
 				AA74DA6C1EB3927400D373C4 /* Controller */,
 				AA74DA6D1EB3927400D373C4 /* Model */,
 				AA74DA6E1EB3927400D373C4 /* View */,
@@ -186,6 +207,7 @@
 		AA74DA5A1EB319F700D373C4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				AA1078B21ECE5E8500F806E9 /* ViewModel */,
 				AA74DA711EB3949900D373C4 /* Model */,
 				AA74DA721EB3949900D373C4 /* View */,
 				AA74DA6F1EB3949900D373C4 /* Controller */,
@@ -521,9 +543,11 @@
 				AA4681911EB8C63000484748 /* PageTitleView.swift in Sources */,
 				AAC4140E1EB2BC7C005F1815 /* WDYZB.xcdatamodeld in Sources */,
 				AA74DA751EB3953800D373C4 /* HomeViewController.swift in Sources */,
+				AA1078B91ECE67C900F806E9 /* NSDate-Extension.swift in Sources */,
 				AA4681961EB8DD7400484748 /* Common.swift in Sources */,
 				AA3B72871EC213F20028792C /* CollectionPrettyCell.swift in Sources */,
 				AA39A1AE1EBF797B00CCE926 /* CollectionNormalCell.swift in Sources */,
+				AA1078B71ECE643D00F806E9 /* RecommendViewModel.swift in Sources */,
 				AA39A1A71EBEEA4400CCE926 /* RecommendViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
